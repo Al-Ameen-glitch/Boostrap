@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Muthsaal Nigeria | Food Buy & Sell</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <style>
+    body {
+      background: linear-gradient(145deg, #1b001b, #330033);
+      color: #fff0f5;
+      font-family: 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    h2, h4 {
+      text-shadow: 0 0 10px #ff00cc;
+    }
+
+    .neon-box {
+      background: rgba(255, 192, 203, 0.1);
+      border: 1px solid rgba(255, 20, 147, 0.3);
+      box-shadow: 0 0 25px rgba(255, 20, 147, 0.4);
+      border-radius: 15px;
+      backdrop-filter: blur(10px);
+      padding: 20px;
+      margin-bottom: 30px;
+      transition: all 0.3s ease;
+    }
+
+    .neon-box:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 0 35px rgba(255, 20, 147, 0.7);
+    }
+
+    .btn-glow {
+      background: #ff00cc;
+      border: none;
+      color: #fff0f5;
+      font-weight: bold;
+      box-shadow: 0 0 10px #ff00cc, 0 0 20px #ff66cc;
+      transition: all 0.3s ease;
+    }
+
+    .btn-glow:hover {
+      box-shadow: 0 0 25px #ff00cc, 0 0 45px #ff66cc;
+      transform: scale(1.05);
+    }
+
+    .carousel-inner img {
+      border-radius: 15px;
+    }
+
+    .accordion-button {
+      background-color: #330033;
+      color: #ff66cc;
+      font-weight: bold;
+    }
+
+    .accordion-button:not(.collapsed) {
+      background-color: #ff00cc;
+      color: #330033;
+      box-shadow: 0 0 15px #ff00cc;
+    }
+
+    .nav-tabs .nav-link.active {
+      background: #ff00cc;
+      color: #330033;
+      box-shadow: 0 0 15px #ff00cc;
+    }
+
+    .nav-tabs .nav-link {
+      color: #ff66cc;
+      border: 1px solid #ff00cc;
+      transition: all 0.3s ease;
+    }
+
+    .nav-tabs .nav-link:hover {
+      background: #ff66cc;
+      color: #330033;
+    }
+
+    .tooltip-inner {
+      background-color: #ff00cc;
+      color: #fff0f5;
+      font-weight: bold;
+    }
+
+    .list-group-item {
+      background: #330033;
+      color: #ff66cc;
+      border-color: #ff00cc;
+    }
+
+    input:focus, textarea:focus {
+      border-color: #ff00cc;
+      box-shadow: 0 0 10px #ff00cc;
+      outline: none;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Header -->
+<div class="container text-center mt-5">
+  <h2 data-bs-toggle="tooltip" title="Welcome to Muthsaal Nigeria Limited!">🍓 Muthsaal Food Market</h2>
+  <p class="lead">Buy and Sell Fresh Food with Ease — Powered by Al-Ameen</p>
+</div>
+
+<div class="container mt-4">
+
+  <!-- Tabs -->
+  <div class="neon-box">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item">
+        <button class="nav-link active" id="tab1" data-bs-toggle="tab" data-bs-target="#section1" type="button">Buy Food</button>
+      </li>
+      <li class="nav-item">
+        <button class="nav-link" id="tab2" data-bs-toggle="tab" data-bs-target="#section2" type="button">Sell Food</button>
+      </li>
+    </ul>
+    <div class="tab-content p-3 border border-top-0">
+      <div class="tab-pane fade show active" id="section1" role="tabpanel">
+        <p>Discover the freshest local foods and buy with confidence. Browse our curated marketplace!</p>
+      </div>
+      <div class="tab-pane fade" id="section2" role="tabpanel">
+        <p>Sell your fresh produce or packaged foods directly to customers with ease and security.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Carousel -->
+  <div class="neon-box">
+    <div id="foodSlider" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=800&q=80" class="d-block w-100" alt="Fresh fruits" />
+        </div>
+        <div class="carousel-item">
+          <img src="https://images.unsplash.com/photo-1504674900247-0877df9cc836?auto=format&fit=crop&w=800&q=80" class="d-block w-100" alt="Baked goods" />
+        </div>
+        <div class="carousel-item">
+          <img src="complete.png" class="d-block w-100" alt="Akara" />
+        </div>
+        <div class="carousel-item">
+          <img src="dodo, jollof, and chicken.png" class="d-block w-100" alt="Moi Moi" />
+        </div>
+        <div class="carousel-item">
+          <img src="fried rice.png" class="d-block w-100" alt="Suya" />
+        </div>
+        <div class="carousel-item">
+          <img src="fufu.png" class="d-block w-100" alt="Pounded Yam and Egusi Soup" />
+        </div>
+        <div class="carousel-item">
+          <img src="full.png" class="d-block w-100" alt="Jollof Rice" />
+        </div>
+        <div class="carousel-item">
+          <img src="jollof and chicken.png" class="d-block w-100" alt="Suya" />
+        </div>
+        <div class="carousel-item">
+          <img src="jollof rice.png" class="d-block w-100" alt="Assorted seafood" />
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#foodSlider" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#foodSlider" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Accordion -->
+  <div class="neon-box accordion" id="accordionFood">
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingOne">
+        <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+          🛒 How to Buy Food?
+        </button>
+      </h2>
+      <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionFood">
+        <div class="accordion-body">
+          Browse the listings, select your desired items, and place your order securely through our platform.
+        </div>
+      </div>
+    </div>
+    <div class="accordion-item">
+      <h2 class="accordion-header" id="headingTwo">
+        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+          📦 How to Sell Food?
+        </button>
+      </h2>
+      <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFood">
+        <div class="accordion-body">
+          Register as a seller, upload your products with details, and start connecting with buyers instantly.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- List Group -->
+  <div class="neon-box">
+    <h4>📝 Features</h4>
+    <ul class="list-group">
+      <li class="list-group-item">Easy Buy & Sell Interface</li>
+      <li class="list-group-item">Real-time Product Listings</li>
+      <li class="list-group-item">Secure Transactions</li>
+      <li class="list-group-item">Responsive Design</li>
+      <li class="list-group-item">Customer Support</li>
+    </ul>
+  </div>
+
+  <!-- Contact Form -->
+  <div class="neon-box">
+    <h4>📩 Contact Us</h4>
+    <form id="contactForm" novalidate>
+      <div class="mb-3">
+        <label for="nameField" class="form-label">Full Name</label>
+        <input
+          type="text"
+          class="form-control"
+          id="nameField"
+          placeholder="E.g Al-Ameen"
+          required
+        />
+        <div class="invalid-feedback">Please enter your name.</div>
+      </div>
+      <div class="mb-3">
+        <label for="phoneField" class="form-label">Phone Number</label>
+        <input
+          type="tel"
+          class="form-control"
+          id="phoneField"
+          placeholder="+234-81........"
+          pattern="[0-9]{10,15}"
+          required
+        />
+        <div class="invalid-feedback">Please enter a valid phone number (digits only).</div>
+      </div>
+      <div class="mb-3">
+        <label for="emailField" class="form-label">Email Address</label>
+        <input
+          type="email"
+          class="form-control"
+          id="emailField"
+          placeholder="ak........@gmail.com"
+          required
+        />
+        <div class="invalid-feedback">Please enter a valid email address.</div>
+      </div>
+      <div class="mb-3">
+        <label for="messageField" class="form-label">Message</label>
+        <textarea
+          class="form-control"
+          id="messageField"
+          rows="3"
+          placeholder="Write your message here..."
+          required
+        ></textarea>
+        <div class="invalid-feedback">Please enter your message.</div>
+      </div>
+      <button type="submit" class="btn btn-glow">Send Message</button>
+    </form>
+  </div>
+
+  <!-- Tooltip Button -->
+  <div class="text-center mt-4">
+    <button
+      type="button"
+      class="btn btn-outline-danger"
+      data-bs-toggle="tooltip"
+      title="Call or WhatsApp: 08130297365"
+    >
+      📞 Contact Number
+    </button>
+  </div>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="thankYouModal" tabindex="-1" aria-labelledby="thankYouModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content bg-dark text-pink border-pink">
+      <div class="modal-header">
+        <h5 class="modal-title" id="thankYouModalLabel">Message Sent</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-pink">
+        Thank you for contacting Muthsaal Nigeria Limited. We will get back to you shortly!
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-glow" data-bs-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  // Enable tooltips
+  const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+  tooltipTriggerList.map(function (tooltipTriggerEl) {
+    return new bootstrap.Tooltip(tooltipTriggerEl);
+  });
+
+  // Bootstrap form validation
+  (() => {
+    'use strict';
+    const form = document.getElementById('contactForm');
+
+    form.addEventListener('submit', function (event) {
+      event.preventDefault();
+      event.stopPropagation();
+
+      if (form.checkValidity()) {
+        // Show modal if form valid
+        const thankYouModal = new bootstrap.Modal(document.getElementById('thankYouModal'));
+        thankYouModal.show();
+        form.reset();
+        form.classList.remove('was-validated');
+      } else {
+        form.classList.add('was-validated');
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
